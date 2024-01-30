@@ -24,6 +24,19 @@ function recusion(i){
   }
   recusive(5);
 
+  // example 2-=-0 
+  function recusion(n){
+    // BASE CASE
+    if(n==0){
+      return;
+    }
+    console.log(n);
+    
+    // RECUSION CASE
+    recusion(n-1);
+  }
+  recusion(5);
+
 //   same questjion incecreasing order
 // new fun
 function rec2(i, n){
