@@ -114,3 +114,65 @@ rl.on('line', (N) => {
   printWord(parseInt(N));
   rl.close();
 });
+
+
+//Recursive print number in Reverse
+function printreverse(N){
+if(N==0){
+  return;
+}
+
+  process.stdout.write(N +" ");
+  printreverse(N-1);
+}
+// input: 5
+// output : 5 4 3 2 1 
+
+
+//Print between x and y
+function recursive(i , y){
+  // Base case
+if(i > y){
+  return;
+}
+process.stdout.write(i + " ");
+  // recursive case
+recursive(i+1, y);
+}
+function printXandY(x , y){
+recursive(x , y);
+}
+// input: 5
+        //8
+// output : 5 6 7 8
+
+// Recursive print Number
+function printN(N, i){
+  // BASE CASE
+if(i>N){
+  return
+}
+
+process.stdout.write(N +" ");
+  //RECURSIVE CASE
+
+printN(N+1, i);
+}
+
+// input
+5
+// output
+// 1 2 3 4 5 
+
+// sum of natural number
+
+function recursion(n){
+  // BASE CASE 
+  if(n==1){
+    return 1;
+  }
+
+let product = n + product(n-1)   // 5 + (5-1)
+  // RECURSIVE CASE 
+  recursion(n+1);
+}
