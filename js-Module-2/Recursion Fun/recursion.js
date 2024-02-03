@@ -176,3 +176,6 @@ let product = n + product(n-1)   // 5 + (5-1)
   // RECURSIVE CASE 
   recursion(n+1);
 }
+//input 
+// 1 2 3 4 5
+// output
