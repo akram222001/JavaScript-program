@@ -104,3 +104,98 @@ const readline = require('readline').createInterface({
     return recursion(0, arr, n);
   }
   */
+
+  //////////////////////////////////
+  
+  //find the array11 in array
+
+  const readline = require('readline');
+const rl = readline.createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+let input = [];
+
+rl.on('line', (line) => {
+  input.push(line);
+}).on('close', () => {
+  let n = Number(input[0]);
+  let arr = input[1].split(' ').map(Number);
+  console.log(array11(arr, 0));
+});
+
+function array11(nums, index) 
+{
+  // BASE CASE 
+  if(index == nums.length)
+  {
+    return 0;
+  }
+  
+  // RECURSIVE CASE 
+  if(nums[index] == 11)
+  {
+    return 1 + array11(nums, index + 1);
+  }
+  else
+  {
+    return array11(nums, index + 1);
+  }
+}
+
+///////////////////////////////////////
+
+//find the number of digits
+/*
+const readline = require('readline').createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+function numOfDigi(n) {
+  
+  if(n == 0)
+  {
+    return 0;
+  }
+  
+  let answer = 1 + numOfDigi(parseInt(n/10));
+  return answer;
+}
+
+readline.question('', n => {
+  const result = numOfDigi(parseInt(n));
+  console.log(result);
+  readline.close();
+});
+*/
+
+///////////////////////////////////////////////
+
+// find digits sum
+/*
+const readline = require('readline').createInterface({
+  input: process.stdin,
+  output: process.stdout
+});
+
+function sumOfDigi(n) {
+  
+  if(n == 0)
+  {
+    return 0;
+  }
+  
+  let lastDigit = n%10;
+  
+  let answer = lastDigit + sumOfDigi(parseInt(n/10));
+  return answer;
+}
+
+readline.question('', n => {
+  let result = sumOfDigi(parseInt(n));
+  console.log(result);
+  readline.close();
+});
+*/
